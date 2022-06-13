@@ -7,9 +7,9 @@ import { Injectable } from '@angular/core';
 export class CursosService {
 
   ListaCursos: Cursos[] = [
-    {id: 1, cursoNombre: "React.Js", cursoDias:"lunes y miercoles", precio: 230000, profesor: "Antonio Gallego", detalle:"Curso de react"},
-    {id: 1, cursoNombre: "Angular", cursoDias:"martes y jueves", precio: 230000, profesor: "Marcelo Tinelli", detalle:"Curso de angular"},
-    {id: 1, cursoNombre: "Vue.Js", cursoDias:"sabados", precio: 230000, profesor: "Ricardo Fort", detalle:"Curso de Vue"},
+    {id: 1, cursoNombre: "UX/UI", cursoDias:"Lunes y Miércoles", precio: 2300, profesor: "Antonio Gallego", detalle:"Curso de UX/UI"},
+    {id: 1, cursoNombre: "Angular", cursoDias:"Martes y Jueves", precio: 2500, profesor: "Marcelo Tinelli", detalle:"Curso de Angular"},
+    {id: 1, cursoNombre: "Vue.Js", cursoDias:"Sabados", precio: 1300, profesor: "Ricardo Fort", detalle:"Curso de Vue.Js"},
   ];
   constructor() { }
 

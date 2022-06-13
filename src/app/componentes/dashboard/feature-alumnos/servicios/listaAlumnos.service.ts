@@ -8,10 +8,10 @@ import { Injectable } from '@angular/core';
 export class ListaAlumnosService {
 
   ListaAlumnos=  [
-    {id:1,nombre: "Juan Carlos",apellido:"Martinez", edad:25,telefono:115512215, correo: 'algo@ejemplo'},
-    {id:2,nombre: "Juan Carlos",apellido:"Martinez",edad: 30, telefono: 561654215, correo: 'algo@ejemplo'},
-    {id:3,nombre: "Neri", apellido:"Ballanti", edad: 23, telefono: 156498714654 , correo: 'algo@ejemplo'},
-    {id:4,nombre: "Julio", apellido:"Rodriguez", edad: 19, telefono: 6516541645 , correo: 'algo@ejemplo'},
+    {id:1,nombre: "Abraham",apellido:"Maihuasowske", edad:37,telefono:1123568974, correo: 'holasoy@kosher.com'},
+    {id:2,nombre: "Iasias",apellido:"O'Higgins",edad: 28, telefono: 785213648, correo: 'isa@color.br'},
+    {id:3,nombre: "Paola", apellido:"Montenegro", edad: 37, telefono: 965231451 , correo: 'cosa1@cosa2.cpsa3'},
+    {id:4,nombre: "Patricia", apellido:"Mitre", edad: 52, telefono: 6516541645 , correo: '12354@ejemplo.78'},
 
   ];
   constructor() { }

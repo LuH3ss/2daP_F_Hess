@@ -10,10 +10,10 @@ import { Injectable } from '@angular/core';
 export class InscripcionService {
 
   inscripciones=  [
-    {id:1,nombre: "Juan Carlos",apellido:"Martinez",curso:'react',dias:"Lunes y Miercoles"},
-    {id:2,nombre: "Juan Carlos",apellido:"Martinez",curso:'angular',dias:" Martes y Jueves"},
-    {id:3,nombre: "Neri", apellido:"Ballanti", curso:'vueJS',dias:"Lunes y Miercoles"},
-    {id:4,nombre: "Julio", apellido:"Rodriguez",curso:'angular',dias:"Martes y Jueves"},
+    {id:1,nombre: "Sofia",apellido:"Lingüini",curso:'UX/UI',dias:"Lunes y Miercoles"},
+    {id:2,nombre: "Susana",apellido:"Oriah",curso:'Diseño para Devs',dias:" Martes y Jueves"},
+    {id:3,nombre: "Neri", apellido:"Ballanti", curso:'VueJS',dias:"Lunes y Miercoles"},
+    {id:4,nombre: "Julio", apellido:"Rodriguez",curso:'Angular',dias:"Martes y Jueves"},
 
   ];
   constructor() { }

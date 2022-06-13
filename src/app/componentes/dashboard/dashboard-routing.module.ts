@@ -10,11 +10,12 @@ import { CursosComponent } from './feature-cursos/cursos/cursos.component';
 import { ListaAlumnosComponent } from './feature-alumnos/alumnos/listaAlumnos.component';
 
 import { AgregarCursoComponent } from './feature-cursos/agregar-curso/agregar-curso.component';
+import { InicioComponent } from 'src/app/coreModule/inicio/inicio.component';
 
 const routes: Routes = [
   {
     path: '',component: DashboardComponent, children: [
-      {path: '', component: IngresoComponent},
+      {path: '', component: InicioComponent},
       {path: 'alumnos', component: ListaAlumnosComponent},
       {path: 'inscripcion', component: InscripcionComponent},
       {path: 'agregar-inscripcion', component: AgregarInscripcionComponent},    

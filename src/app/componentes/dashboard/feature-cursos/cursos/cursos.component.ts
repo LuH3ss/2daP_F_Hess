@@ -54,13 +54,13 @@ export class CursosComponent implements OnInit {
 
     if(localStorage.getItem('rol') === 'admin')
     {
-      console.log("ES ADMIN")
+     
       this.admin=true;
 
     }
     else{
     this.admin=false;
-    console.log("ES USER")
+
     }
   }
   loadView(){

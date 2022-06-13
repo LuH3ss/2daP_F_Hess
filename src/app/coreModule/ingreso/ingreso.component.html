@@ -3,14 +3,14 @@
     <div class="login">
 
         <form *ngIf="!load" [formGroup]="form" (ngSubmit)="ingreso()">
-          <h1 color="primary" class="tit" appTwenty>Sign up </h1>
-            <img src="/assets/img/usuario.png" alt="">
+          <h1 color="primary" class="tit" appTwenty>Ingreso</h1>
+        
             <mat-form-field appearance="fill">
               <mat-label>Usuario:</mat-label>
               <input matInput type="text" formControlName="usuario">
             </mat-form-field>
             <mat-form-field appearance="fill">
-              <mat-label>Password:</mat-label>
+              <mat-label>Contraseña:</mat-label>
               <input matInput type="password" formControlName="contraseña">
             </mat-form-field>
             <br>

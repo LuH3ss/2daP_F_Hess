@@ -20,8 +20,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class EditarInscripcionComponent implements OnInit {
  
   
-  cursos:any[]= ['react', 'angular', 'vue', 'react y angular', 'react y vue', 'angular y vue'];
-  dias: any[] = ['lunes y miercoles', 'martes y jueves', 'sabado', 'miercoles y viernes'];
+  cursos:any[]= ['UX/UI', 'Angular', 'VueJs', 'UX/UI y Angular', 'UX/UI y vue', 'Angular y VueJs'];
+  dias: any[] = ['Lunes y Miércoles', 'Martes y Jueves', 'Sabado', 'Miércoles y Viernes'];
   form: FormGroup;
   value: any = null;
   
@@ -73,7 +73,7 @@ volver(){
 inicializar(alumno:Inscripcion) {
 
   this.form = this.fb.group({
-    alumno:  ["",  [Validators.required, Validators.maxLength(40), ]],
+    alumno:  ["",  [Validators.required, Validators.maxLength(30), ]],
     curso:  ["",  [Validators.required]],
     dias: ["",  [Validators.required]],
     

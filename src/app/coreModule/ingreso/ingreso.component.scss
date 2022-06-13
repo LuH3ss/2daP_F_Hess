@@ -1,11 +1,18 @@
-
+.body {
+  background-image: linear-gradient(to top, #1b1f25, #1c273f, #272d58, #3f306e, #602c7e);
+}
 .login form{
   display: flex;
-  margin: 25px;
+  background-color: rgba(250, 235, 215, 0.548);
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.315);
+  gap: 15px;
+  color: antiquewhite;
+  border: 2px solid antiquewhite;
+  height: 450px;
+  width: 300px;
 
 }
 .ancho{
@@ -13,6 +20,7 @@
 }
 .spinner{
     margin: 0 auto;
+   
 }
 
 
@@ -41,7 +49,7 @@ ul {
 
 .tit {
   letter-spacing: 3px;
-  border-bottom: 1px solid rgb(152, 5, 144);
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 img {

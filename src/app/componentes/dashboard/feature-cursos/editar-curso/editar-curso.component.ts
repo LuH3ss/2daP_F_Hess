@@ -40,6 +40,7 @@ export class EditarCursoComponent implements OnInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
+  
 
   editarAlumno(form:any){
     const formCursos: Cursos={

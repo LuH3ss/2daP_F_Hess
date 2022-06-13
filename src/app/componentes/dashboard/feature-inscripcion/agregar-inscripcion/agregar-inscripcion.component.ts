@@ -15,8 +15,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 
 export class AgregarInscripcionComponent implements OnInit {
 
-  cursos: any[] = ['react', 'angular', 'vue', 'react y angular', 'react y vue', 'angular y vue'];
-  dias: any[] = ['lunes y miercoles', 'martes y jueves', 'sabado', 'miercoles y viernes'];
+  cursos: any[] = ['UX/UI', 'Angular', 'VueJs', 'UX/UI y Angular', 'UX/UI y VueJs', 'Angular y VueJs'];
+  dias: any[] = ['Lunes y Miércoles', 'Martes y Jueves', 'Sabado', 'Miércoles y Viernes'];
   form: FormGroup;
   value: any = null;
   constructor(
