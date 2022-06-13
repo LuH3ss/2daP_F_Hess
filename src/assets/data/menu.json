@@ -4,12 +4,12 @@
         "redirect":"/dashboard"
     },
     {
-        "nombre":"Estudiantes",
-        "redirect":"/dashboard/estudiantes"
+        "nombre":"Alumnos",
+        "redirect":"/dashboard/alumnos"
     },
     {
       "nombre":"Inscripciones",
-      "redirect":"/dashboard/inscripciones"
+      "redirect":"/dashboard/inscripcion"
   },
     {
         "nombre":"Cursos",

@@ -9,7 +9,7 @@ import { ListaAlumnosComponent } from './feature-alumnos/alumnos/listaAlumnos.co
 import { AgregarAlumnosListaComponent } from './feature-alumnos/agregar-alumnos-lista/agregar-alumnos-lista.component';
 import { FeatureCursosModule } from './feature-cursos/feature-cursos.module';
 import { FeatureAlumnosModule } from './feature-alumnos/feature-alumnos.module';
-
+import { EditarAlumnosListaComponent } from './feature-alumnos/editar-alumnos-lista/editar-alumnos-lista.component';
 import { HeaderComponent } from '../../coreModule/header/header.component';
 
 import { MaterialModule } from '../material/material.module';
@@ -33,7 +33,7 @@ import { DetalleCursosComponent } from './feature-cursos/detalle-cursos/detalle-
     ListaAlumnosComponent,
     AgregarInscripcionComponent,
     AgregarCursoComponent,
-   
+    EditarAlumnosListaComponent,
   
     DetalleComponent,
   

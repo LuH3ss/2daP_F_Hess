@@ -14,10 +14,10 @@ export class InicioComponent implements OnInit {
   constructor(private menuService: MenuService) { }
 
   ngOnInit(): void {
-    this.loadView();
+    this.cargarVista();
   }
 
-  loadView(){
+  cargarVista(){
     this.cargarMenu();
   }
 

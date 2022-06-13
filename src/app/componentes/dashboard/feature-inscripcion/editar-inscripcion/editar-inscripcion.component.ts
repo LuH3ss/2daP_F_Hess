@@ -11,7 +11,7 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
-  selector: 'app-editar-estudiante',
+  selector: 'app-editar-alumno',
   templateUrl: './editar-inscripcion.component.html',
   styleUrls: ['./editar-inscripcion.component.scss']
 })
@@ -46,10 +46,10 @@ export class EditarInscripcionComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  editEstudiante(form:any){
+  editarAlumno(form:any){
     const formInscripciones: Inscripcion={
       id: this.data.id,
-      nombre: this.form.value.estudiante,
+      nombre: this.form.value.alumno,
       apellido: this.data.apellido,
       curso: this.form.value.curso,
       dias: this.form.value.dias,
@@ -57,8 +57,8 @@ export class EditarInscripcionComponent implements OnInit {
     }
 
     this._inscripcionesService.editarInscripciones(formInscripciones);
-      this.router.navigate(['/dashboard/inscripciones']);
-      this._snackBar.open('Estudiante editado exitosamente','', {
+      this.router.navigate(['/dashboard/inscripcion']);
+      this._snackBar.open('Alumno editado exitosamente','', {
         horizontalPosition: 'center',
         verticalPosition: 'top',
         duration: 1500,
@@ -70,18 +70,18 @@ volver(){
   this.dialogRef.close();
 }
 
-inicializar(estudiante:Inscripcion) {
+inicializar(alumno:Inscripcion) {
 
   this.form = this.fb.group({
-    estudiante:  ["",  [Validators.required, Validators.maxLength(40), ]],
+    alumno:  ["",  [Validators.required, Validators.maxLength(40), ]],
     curso:  ["",  [Validators.required]],
     dias: ["",  [Validators.required]],
     
     })
   console.log(this.form);
-  this.form.get('estudiante')?.patchValue(estudiante.nombre);
-  this.form.get('curso')?.patchValue(estudiante.curso);
-  this.form.get('dias')?.patchValue(estudiante.dias);
+  this.form.get('alumno')?.patchValue(alumno.nombre);
+  this.form.get('curso')?.patchValue(alumno.curso);
+  this.form.get('dias')?.patchValue(alumno.dias);
   
 }
 }

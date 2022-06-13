@@ -23,9 +23,9 @@ export class ListaAlumnosComponent implements OnInit {
   datosUsuario: string;
 
   listaCursos: Cursos[] = [];
-  listaEstudiantes: ListaAlumnos[] = [];
+  listaAlumnos: ListaAlumnos[] = [];
 
-  displayedColumns: string[] = ['nombre', 'edad', 'correo', 'telefono', 'acciones'];
+  displayedColumns: string[] = ['nombre', 'edad', 'telefono','correo' , 'acciones'];
   
   dataSource = new MatTableDataSource<any>();
 
@@ -41,28 +41,28 @@ export class ListaAlumnosComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
-    this.loadView();
+    this.cargarVista();
     
   }
 
-  validaRol(){
+  isRole(){
     this.datosUsuario = JSON.stringify(localStorage.getItem('rol'));
     console.log(this.datosUsuario);
 
     if(localStorage.getItem('rol') === 'admin')
     {
-      console.log("ES ADMIN")
+   
       this.admin=true;
 
     }
     else{
     this.admin=false;
-    console.log("ES USER")
+    
     }
   }
-  loadView(){
-    this.cargarEstudiantes();
-    this.validaRol();
+  cargarVista(){
+    this.cargarAlumnos();
+    this.isRole();
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -72,21 +72,21 @@ export class ListaAlumnosComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort
   }
-  cargarEstudiantes(){
-    this.listaEstudiantes = this._alumnosListaService.getEstudiantes();
-    this.dataSource = new MatTableDataSource(this.listaEstudiantes);
+  cargarAlumnos(){
+    this.listaAlumnos = this._alumnosListaService.getAlumnos();
+    this.dataSource = new MatTableDataSource(this.listaAlumnos);
    this.ngAfterViewInit()
   }
   getCursos(){
      return this.listaCursos.slice();
   }
-  getEstudiantes(){
-     return this.listaEstudiantes.slice();
+  getAlumnos(){
+     return this.listaAlumnos.slice();
   }
-  openDialog2(id_delform:number): void{
-    const estudiante = this._alumnosListaService.getEstudiantes().find(c => c.id === id_delform);
+  abreDialogo2(id_delform:number): void{
+    const alumno = this._alumnosListaService.getAlumnos().find(c => c.id === id_delform);
     const dialogRef = this.dialog.open(DetalleComponent, {
-      data: estudiante,
+      data: alumno,
       width: '1250px',
   
     });
@@ -94,15 +94,15 @@ export class ListaAlumnosComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       console.log(result);
-      this.cargarEstudiantes();
+      this.cargarAlumnos();
     });
 
   }
 
-  openDialog(id_delform:number): void {
-    const estudiante = this._alumnosListaService.getEstudiantes().find(c => c.id === id_delform);
+  abreDialogo(id_delform:number): void {
+    const alumno = this._alumnosListaService.getAlumnos().find(c => c.id === id_delform);
     const dialogRef = this.dialog.open(EditarAlumnosListaComponent , {
-      data: estudiante,
+      data: alumno,
       width: '1250px',
   
     });
@@ -110,15 +110,15 @@ export class ListaAlumnosComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       console.log(result);
-      this.cargarEstudiantes();
+      this.cargarAlumnos();
     });
     
   }
-  eliminarEstudiante(index: number){
+  eliminarAlumno(index: number){
     console.log(index);
-    this._alumnosListaService.eliminarEstudiante(index);
-    this.cargarEstudiantes();
-    this._snackBar.open('Estudiante eliminado con exito','', {
+    this._alumnosListaService.eliminarAlumno(index);
+    this.cargarAlumnos();
+    this._snackBar.open('Alumno eliminado con exito','', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
       duration: 1500,

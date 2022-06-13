@@ -42,16 +42,16 @@ export class EditarAlumnosListaComponent implements OnInit {
     
   }
 
-  editEstudiante(form:any){
-    const formEstudiante: ListaAlumnos={
+  editarAlumno(form:any){
+    const formAlumno: ListaAlumnos={
       id: this.data.id,
-      nombre: this.form.value.estudiante,
+      nombre: this.form.value.alumno,
       apellido: this.data.apellido,
       edad: this.form.value.edad,
       correo: this.form.value.correo,
       telefono: this.form.value.telefono,
     }
-    this._alumnosService.editEstudiante(formEstudiante);
+    this._alumnosService.editarAlumno(formAlumno);
       this.router.navigate(['/dashboard/alumnos']);
       this._snackBar.open('Alumno editado exitosamente','', {
         horizontalPosition: 'center',

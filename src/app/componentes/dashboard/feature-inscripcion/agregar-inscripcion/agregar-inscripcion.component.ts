@@ -29,7 +29,7 @@ export class AgregarInscripcionComponent implements OnInit {
                  this.value = navigation?.extras?.state;
 
             this.form = this.fb.group({
-              estudiante:  ["",  [Validators.required, Validators.maxLength(40), Validators.pattern(/^([Aa-zA-ZáéíóúÁÉÍÓÚÑñ]{2,}\s?){2,4}$/)]],
+              alumno:  ["",  [Validators.required, Validators.maxLength(40), Validators.pattern(/^([Aa-zA-ZáéíóúÁÉÍÓÚÑñ]{2,}\s?){2,4}$/)]],
               curso:  ["",  [Validators.required]],
               dias: ["",  [Validators.required]],
 

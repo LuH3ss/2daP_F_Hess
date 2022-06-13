@@ -28,7 +28,7 @@ export class AgregarAlumnosListaComponent implements OnInit {
                  this.value = navigation?.extras?.state;
 
     this.form = this.fb.group({
-      estudiante:  ["",  [Validators.required, Validators.maxLength(10)]],
+      alumno:  ["",  [Validators.required, Validators.maxLength(10)]],
       edad:  ["",  [Validators.required]],
       correo: ["",  [Validators.required]],
        telefono:  ["", [Validators.required]],
@@ -50,9 +50,9 @@ export class AgregarAlumnosListaComponent implements OnInit {
       telefono: this.form.value.telefono,
     }
 
-    this._alumnosService.agregarEstudiante(alumno);
+    this._alumnosService.agregarAlumno(alumno);
     this.router.navigate(['/dashboard/alumnos']);
-    this._snackBar.open('Estudiante agregado exitosamente','', {
+    this._snackBar.open('Alumno agregado exitosamente','', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
       duration: 1500,

@@ -85,17 +85,17 @@ export class InscripcionComponent implements OnInit {
     console.log(index);
     this._inscripcionService.eliminarInscripciones(index);
     this.cargarInscripciones();
-    this._snackBar.open('Estudiante eliminado con exito','', {
+    this._snackBar.open('Alumno eliminado con exito','', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
       duration: 1500,
     })
   } 
 
-  openDialog2(id_delform:number): void{
-    const estudiante = this._inscripcionService.getInscripciones().find(c => c.id === id_delform);
+  abreDialogo2(id_delform:number): void{
+    const alumno = this._inscripcionService.getInscripciones().find(c => c.id === id_delform);
     const dialogRef = this.dialog.open(DetalleInscripcionComponent, {
-      data: estudiante,
+      data: alumno,
       width: '1250px',
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -106,7 +106,7 @@ export class InscripcionComponent implements OnInit {
   }
 
   editarInscripcion(id:number){
-    this._snackBar.open('Registro de estudiante editado','', {
+    this._snackBar.open('Registro de alumno editado','', {
      horizontalPosition: 'center',
      verticalPosition: 'top',
      duration: 1500,
@@ -123,10 +123,10 @@ export class InscripcionComponent implements OnInit {
  }
 
 
- openDialog(id_delform:number): void {
-  const estudiante = this._inscripcionService.getInscripciones().find(c => c.id === id_delform);
+ abreDialogo(id_delform:number): void {
+  const alumno = this._inscripcionService.getInscripciones().find(c => c.id === id_delform);
   const dialogRef = this.dialog.open(EditarInscripcionComponent, {
-    data: estudiante,
+    data: alumno,
     width: '1250px',
 
   });

@@ -8,9 +8,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CursosComponent } from './feature-cursos/cursos/cursos.component';
 import { ListaAlumnosComponent } from './feature-alumnos/alumnos/listaAlumnos.component';
-import {FeatureInscripcionModule} from './feature-inscripcion/feature-inscripcion.module';
-import {FeatureAlumnosModule} from './feature-alumnos/feature-alumnos.module';
-import {FeatureCursosModule} from './feature-cursos/feature-cursos.module';
+
 import { AgregarCursoComponent } from './feature-cursos/agregar-curso/agregar-curso.component';
 
 const routes: Routes = [
@@ -20,7 +18,7 @@ const routes: Routes = [
       {path: 'alumnos', component: ListaAlumnosComponent},
       {path: 'inscripcion', component: InscripcionComponent},
       {path: 'agregar-inscripcion', component: AgregarInscripcionComponent},    
-      {path: 'agregar-estudiante', component: AgregarAlumnosListaComponent},    
+      {path: 'agregar-alumno', component: AgregarAlumnosListaComponent},    
       {path: 'cursos', component: CursosComponent},
       {path: 'agregar-cursos', component: AgregarCursoComponent},
       

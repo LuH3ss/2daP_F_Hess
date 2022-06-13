@@ -51,7 +51,7 @@ export class AgregarCursoComponent implements OnInit {
     }
 
     this._cursosService.agregarCursos(curso);
-    this.router.navigate(['/dashboard/curso']);
+    this.router.navigate(['/dashboard/cursos']);
     this._snackBar.open('Curso agregado exitosamente','', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
@@ -60,7 +60,7 @@ export class AgregarCursoComponent implements OnInit {
     this.form.reset();
   }
   volver(){
-    this.router.navigate(['/dashboard/curso ']);
+    this.router.navigate(['/dashboard/cursos']);
     console.log(this.form.value);
   }
 

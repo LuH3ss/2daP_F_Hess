@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class IngresoComponent implements OnInit {
   form:FormGroup;
-  loading:boolean = false;
+  load:boolean = false;
   datoUsuario: string | null;
 
   constructor( private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router) {
@@ -23,7 +23,7 @@ export class IngresoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  ingresar(){
+  ingreso(){
     const usuario = this.form.value.usuario;
     const contraseña = this.form.value.contraseña;
 
@@ -56,7 +56,7 @@ export class IngresoComponent implements OnInit {
   }
 
   cargando(){
-    this.loading=true;
+    this.load=true;
     setTimeout(() => {
       this.router.navigate(['dashboard']);
     }, 1500);

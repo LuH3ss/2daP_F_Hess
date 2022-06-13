@@ -92,10 +92,10 @@ export class CursosComponent implements OnInit {
     })
   } 
 
-  openDialog2(id_delform:number): void{
-    const estudiante = this._cursosService.getCursos().find(c => c.id === id_delform);
+  abreDialogo2(id_delform:number): void{
+    const alumno = this._cursosService.getCursos().find(c => c.id === id_delform);
     const dialogRef = this.dialog.open(DetalleCursosComponent, {
-      data: estudiante,
+      data: alumno,
       width: '1250px',
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -105,7 +105,7 @@ export class CursosComponent implements OnInit {
     });
   }
 
-  editarEstudiante(id:number){
+  editAlumno(id:number){
     this._snackBar.open('Registro de curso editado','', {
      horizontalPosition: 'center',
      verticalPosition: 'top',
@@ -123,10 +123,10 @@ export class CursosComponent implements OnInit {
  }
 
 
- openDialog(id_delform:number): void {
-  const estudiante = this._cursosService.getCursos().find(c => c.id === id_delform);
+ abreDialogo(id_delform:number): void {
+  const alumno = this._cursosService.getCursos().find(c => c.id === id_delform);
   const dialogRef = this.dialog.open(EditarCursoComponent, {
-    data: estudiante,
+    data: alumno,
     width: '1250px',
 
   });

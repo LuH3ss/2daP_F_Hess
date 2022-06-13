@@ -1,17 +1,17 @@
 
 .al {
-  font-family: 'Inter';
+  padding-top: 15px;
   text-align: center;
   letter-spacing: 3px;
-  border-bottom: 1px solid whitesmoke;
+
   // margin: 15px;
   // padding: 20px;
-  color:whitesmoke ;
+  color:rgb(0, 0, 0) ;
   }
   .bg-div{
   
-    background-color:rgba(226, 81, 23, 0.24);
-    border-radius: 30px;
+    background-color:rgba(228, 250, 140, 0.99);
+   
     box-shadow: 30px 30px 30px  rgba(226, 81, 23, 0.212);
     
     }
@@ -28,7 +28,7 @@
   }
   th, td{
     width: 20%;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
   }
   
   .mat-form-field {
@@ -44,8 +44,8 @@
   }
   
   .mat-header-cell  {
-    background-color:  rgba(237, 36, 46, 0.51);
-    color: white;
+    background-color:  rgba(104, 77, 239, 0.77);
+    color: rgb(0, 0, 0);
   }
   
   .acciones {
@@ -55,7 +55,7 @@
   }
   
   .rol {
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
   font-family: 'Inter';
   font-size: 20px;
   font-weight: bolder;

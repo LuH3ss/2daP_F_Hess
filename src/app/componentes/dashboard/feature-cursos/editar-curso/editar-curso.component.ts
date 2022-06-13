@@ -41,7 +41,7 @@ export class EditarCursoComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  editEstudiante(form:any){
+  editarAlumno(form:any){
     const formCursos: Cursos={
       id: this.data.id,
       cursoNombre: this.form.value.cursoNombre,
@@ -54,7 +54,7 @@ export class EditarCursoComponent implements OnInit {
 
     this._cursosService.editarCursos(formCursos);
       this.router.navigate(['/dashboard/cursos']);
-      this._snackBar.open('Estudiante editado exitosamente','', {
+      this._snackBar.open('Alumno editado exitosamente','', {
         horizontalPosition: 'center',
         verticalPosition: 'top',
         duration: 1500,
