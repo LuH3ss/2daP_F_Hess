@@ -1,6 +1,6 @@
 import { Inscripcion } from './../../../../sharedModule/interfaces/inscripcion';
 
-import { Alumnos, ListaAlumnos } from 'src/app/sharedModule/interfaces/alumnos';
+import { ListaAlumnos } from 'src/app/sharedModule/interfaces/alumnos';
 import { Injectable } from '@angular/core';
 
 

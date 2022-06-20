@@ -1,4 +1,4 @@
-import { Alumnos, ListaAlumnos } from 'src/app/sharedModule/interfaces/alumnos';
+import {  ListaAlumnos } from 'src/app/sharedModule/interfaces/alumnos';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ListaAlumnosService {
 
- apiURL = 'https://62a7cf34bedc4ca6d7cdbac8.mockapi.io/ListaAlumnos';
+ apiURL = 'https://62a7cf34bedc4ca6d7cdbac8.mockapi.io/ListaAlumnos/';
 
   // ListaAlumnos=  [
   //   {id:1,nombre: "Abraham",apellido:"Maihuasowske", edad:37,telefono:1123568974, correo: 'holasoy@kosher.com'},
@@ -22,6 +22,22 @@ export class ListaAlumnosService {
 
 
 
+  updateAlumnos(alumno: ListaAlumnos): Observable<ListaAlumnos> {
+    var response: any;
+  response  = this.http.put<ListaAlumnos>(this.apiURL + alumno.id, alumno).subscribe(data => {
+    console.log("data")
+    console.log(data)
+   return data;
+   })
+  return response;
+   }
+
+
+
+
+
+
+   
   getAlumnosList(): Observable<ListaAlumnos[]>
   {
     return this.http.get<ListaAlumnos[]>(this.apiURL);
@@ -37,21 +53,8 @@ export class ListaAlumnosService {
 
   }
 
-  updateAlumnos(alumno: ListaAlumnos): Observable<ListaAlumnos> {
-    return this.http.put<ListaAlumnos>(this.apiURL + alumno.id, alumno);
-}
 
-  // editAlumno(alumno: ListaAlumnos){
-  //   const index = this.ListaAlumnos.findIndex(c => c.id === alumno.id)
-  //   this.ListaAlumnos[index] = alumno;
-  // }
-  // eliminarAlumno(index: number){
-  //   this.ListaAlumnos.splice(index, 1);
-  // }
 
-  // editarAlumno(alumno: ListaAlumnos) {
-  //   const index = this.ListaAlumnos.findIndex(c => c.id === alumno.id);
-  //   this.ListaAlumnos[index] = alumno;
 
   agregarAlumno(alumno: ListaAlumnos): Observable<ListaAlumnos>  {
     return this.http.post<ListaAlumnos>(this.apiURL, alumno);

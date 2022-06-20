@@ -102,14 +102,12 @@ export class ListaAlumnosComponent implements OnInit {
 
       
   });
-  dialogRef.afterClosed().subscribe((result: any) => {
-    this.router.navigate(['alumnos']);
-  });
-  
-
-  }
+  dialogRef.afterClosed().subscribe((result) => {
+        console.log('The dialog was closed');
+        console.log(result);
+        this.getAlumnos();})
 }
-
+}
   // applyFilter(event: Event) {
   //   const filterValue = (event.target as HTMLInputElement).value;
   //   this.dataSource.filter = filterValue.trim().toLowerCase();

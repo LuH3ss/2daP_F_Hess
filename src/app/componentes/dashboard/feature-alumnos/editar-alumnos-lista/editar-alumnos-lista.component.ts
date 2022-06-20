@@ -45,9 +45,24 @@ export class EditarAlumnosListaComponent implements OnInit {
 
 
   updateAlumnos(alumno: FormGroup){
-  
+    const formAlumno: ListaAlumnos = {
+      id: this.data.id,
+      nombre: alumno.value.nombre,
+      apellido: alumno.value.apellido,
+
+        edad:alumno.value.edad ,
+      correo: alumno.value.correo,
+      telefono: alumno.value.telefono,
+
+
+
   }
 
+  this._alumnosService.updateAlumnos(formAlumno);
+  this._alumnosService.getAlumnosList();
+  this.form.reset();
+  this.dialogRef.close();
+  }
 
 
   volver(){
@@ -57,7 +72,7 @@ export class EditarAlumnosListaComponent implements OnInit {
 
   }
 
-  inicializar(alumno:ListaAlumnos) {
+  inicializar(alumno: ListaAlumnos) {
     this.form = this.fb.group({
       alumno:  ["",  [Validators.required, Validators.maxLength(10)]],
       apellido:["",  [Validators.required]],

@@ -2,12 +2,12 @@ import { Cursos } from 'src/app/sharedModule/interfaces/cursos';
 import { CursosService } from '../servicios/cursos.service';
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Alumnos } from 'src/app/sharedModule/interfaces/alumnos';
+
 import { AgregarCursoComponent } from '../agregar-curso/agregar-curso.component';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MaterialModule } from 'src/app/componentes/material/material.module';
+
 
 @Component({
   selector: 'app-editar-curso',

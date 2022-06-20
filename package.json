@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "2dap_f_hess",
-=======
   "name": "2dapf_hess",
->>>>>>> main
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -24,6 +20,7 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@ngrx/store": "^13.2.0",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.2.0-beta1",
     "jquery": "^3.6.0",

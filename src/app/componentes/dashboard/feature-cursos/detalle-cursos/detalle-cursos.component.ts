@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AgregarAlumnosListaComponent } from '../../feature-alumnos/agregar-alumnos-lista/agregar-alumnos-lista.component';
-import { Alumnos, ListaAlumnos } from 'src/app/sharedModule/interfaces/alumnos';
+
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Cursos } from 'src/app/sharedModule/interfaces/cursos';

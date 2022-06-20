@@ -14,9 +14,9 @@ import { InicioComponent } from 'src/app/coreModule/inicio/inicio.component';
 
 const routes: Routes = [
   {
-    path: '',component: DashboardComponent, canActivate: [GuardiaPrimeroGuard] , children: [
+    path: '',component: DashboardComponent , children: [
       {path: '', component: InicioComponent},
-      {path: 'alumnos', component: ListaAlumnosComponent},
+      {path: 'alumnos',  canActivate: [GuardiaPrimeroGuard], component: ListaAlumnosComponent},
       {path: 'inscripcion', component: InscripcionComponent},
       {path: 'agregar-inscripcion', component: AgregarInscripcionComponent},    
       {path: 'agregar-alumno', component: AgregarAlumnosListaComponent},    

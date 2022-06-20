@@ -1,6 +1,6 @@
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { Alumnos, ListaAlumnos } from 'src/app/sharedModule/interfaces/alumnos';
+import {  ListaAlumnos } from 'src/app/sharedModule/interfaces/alumnos';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, Inject, OnInit } from '@angular/core';
 import { ListaAlumnosService } from '../servicios/listaAlumnos.service';
@@ -28,6 +28,7 @@ export class AgregarAlumnosListaComponent implements OnInit {
                  this.value = navigation?.extras?.state;
 
     this.form = this.fb.group({
+      id:[""],
       alumno:  ["",  [Validators.required, Validators.maxLength(10)]],
       edad:  ["",  [Validators.required]],
       correo: ["",  [Validators.required]],
@@ -49,7 +50,7 @@ export class AgregarAlumnosListaComponent implements OnInit {
       correo: this.form.value.correo,
       telefono: this.form.value.telefono,
     }
-
+    console.log(alumno);
     this._alumnosService.agregarAlumno(alumno);
     this.router.navigate(['/dashboard/alumnos']);
     this._snackBar.open('Alumno agregado exitosamente','', {

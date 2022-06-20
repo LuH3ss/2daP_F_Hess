@@ -3,7 +3,7 @@ import { InscripcionService } from '../servicios/inscripcion.service';
 
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Alumnos } from 'src/app/sharedModule/interfaces/alumnos';
+
 import { AgregarInscripcionComponent } from '../agregar-inscripcion/agregar-inscripcion.component';
 
 import { Router } from '@angular/router';

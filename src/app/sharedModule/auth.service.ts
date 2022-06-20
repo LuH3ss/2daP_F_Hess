@@ -34,7 +34,7 @@ export class AuthService {
   get isAdmin(): Observable<boolean> {
     return this.rol;
   }
-  URL_SERVICIOS: "https://https://62a7cf34bedc4ca6d7cdbac8.mockapi.io/.mockapi.io";
+  URL_SERVICIOS: "https://62a7cf34bedc4ca6d7cdbac8.mockapi.io";
 
 
 
@@ -55,7 +55,7 @@ export class AuthService {
 
   IniciarSesion(usuario: string, contrasena: string): Observable<Usuario> {
     return this.http
-      .get<Usuario[]>("https://62a7cf34bedc4ca6d7cdbac8.mockapi.io/ListaAlumnos")
+      .get<Usuario[]>("https://62a7cf34bedc4ca6d7cdbac8.mockapi.io/Usuarios")
       .pipe(
         map((usuarios: Usuario[]) => {
           return usuarios.filter(
