@@ -34,6 +34,7 @@ export class EditarAlumnosListaComponent implements OnInit {
 
   ngOnInit(): void {
    this.inicializar(this.data);
+   this._alumnosService.getAlumnosList();
 
   }
 
@@ -42,25 +43,12 @@ export class EditarAlumnosListaComponent implements OnInit {
     
   }
 
-  editarAlumno(form:any){
-    const formAlumno: ListaAlumnos={
-      id: this.data.id,
-      nombre: this.form.value.alumno,
-      apellido: this.data.apellido,
-      edad: this.form.value.edad,
-      correo: this.form.value.correo,
-      telefono: this.form.value.telefono,
-    }
-    this._alumnosService.editarAlumno(formAlumno);
-      this.router.navigate(['/dashboard/alumnos']);
-      this._snackBar.open('Alumno editado exitosamente','', {
-        horizontalPosition: 'center',
-        verticalPosition: 'top',
-        duration: 1500,
-      })
-      this.dialogRef.close();
-   
+
+  updateAlumnos(alumno: FormGroup){
+  
   }
+
+
 
   volver(){
       this.router.navigate(['/dashboard/alumnos']);
@@ -71,15 +59,17 @@ export class EditarAlumnosListaComponent implements OnInit {
 
   inicializar(alumno:ListaAlumnos) {
     this.form = this.fb.group({
-      alumno:  ["",  [Validators.required, Validators.maxLength(10), Validators.pattern(/^([Aa-zA-ZáéíóúÁÉÍÓÚÑñ]{2,}\s?){2,4}$/)]],
+      alumno:  ["",  [Validators.required, Validators.maxLength(10)]],
+      apellido:["",  [Validators.required]],
       edad:  ["",  [Validators.required]],
       correo: ["",  [Validators.required]],
       telefono:  ["", [Validators.required]],
     })
     console.log(this.form);
     this.form.get('alumno')?.patchValue(alumno.nombre);
+    this.form.get('apellido')?.patchValue(alumno.apellido);
     this.form.get('edad')?.patchValue(alumno.edad);
-    this.form.controls["correo"].setValue(alumno.correo);
+    this.form.get("correo")?.patchValue(alumno.correo);
     this.form.get('telefono')?.patchValue(alumno.telefono);
     
   }

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "2dap_f_hess",
+=======
+  "name": "2dapf_hess",
+>>>>>>> main
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

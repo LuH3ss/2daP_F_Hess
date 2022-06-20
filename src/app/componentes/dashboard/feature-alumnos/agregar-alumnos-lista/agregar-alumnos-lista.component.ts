@@ -12,7 +12,7 @@ import { ListaAlumnosService } from '../servicios/listaAlumnos.service';
   styleUrls: ['./agregar-alumnos-lista.component.scss']
 })
 export class AgregarAlumnosListaComponent implements OnInit {
- 
+  
 
   form: FormGroup;
   value: any = null;
@@ -59,6 +59,8 @@ export class AgregarAlumnosListaComponent implements OnInit {
     })
     this.form.reset();
   }
+
+
   volver(){
     this.router.navigate(['/dashboard/alumnos']);
     console.log(this.form.value);
