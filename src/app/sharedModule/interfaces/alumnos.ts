@@ -1,5 +1,3 @@
-
-
 export interface ListaAlumnos {
   id: number;
   nombre: string;
