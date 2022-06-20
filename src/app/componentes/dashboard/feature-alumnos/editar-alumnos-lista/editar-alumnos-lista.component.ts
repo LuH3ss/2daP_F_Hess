@@ -44,15 +44,14 @@ export class EditarAlumnosListaComponent implements OnInit {
   }
 
 
-  updateAlumnos(alumno: FormGroup){
+  updateAlumnos(form: FormGroup){
     const formAlumno: ListaAlumnos = {
       id: this.data.id,
-      nombre: alumno.value.nombre,
-      apellido: alumno.value.apellido,
-
-        edad:alumno.value.edad ,
-      correo: alumno.value.correo,
-      telefono: alumno.value.telefono,
+      nombre: this.form.value.nombre,
+      apellido: this.form.value.apellido,
+        edad:this.form.value.edad ,
+      correo: this.form.value.correo,
+      telefono: this.form.value.telefono,
 
 
 
