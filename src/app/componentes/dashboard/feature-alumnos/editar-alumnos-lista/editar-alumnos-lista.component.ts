@@ -59,7 +59,7 @@ export class EditarAlumnosListaComponent implements OnInit {
 
   inicializar(alumno:ListaAlumnos) {
     this.form = this.fb.group({
-      alumno:  ["",  [Validators.required, Validators.maxLength(10), Validators.pattern(/^([Aa-zA-ZáéíóúÁÉÍÓÚÑñ]{2,}\s?){2,4}$/)]],
+      alumno:  ["",  [Validators.required, Validators.maxLength(10)]],
       apellido:["",  [Validators.required]],
       edad:  ["",  [Validators.required]],
       correo: ["",  [Validators.required]],
