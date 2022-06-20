@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/sharedModule/auth.service';
 
 @Component({
   selector: 'app-ingreso',
@@ -13,7 +14,8 @@ export class IngresoComponent implements OnInit {
   load:boolean = false;
   datoUsuario: string | null;
 
-  constructor( private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router) {
+  constructor( private fb: FormBuilder, private _snackBar: MatSnackBar, private router: Router, 
+    private authService: AuthService) {
     this.form = this.fb.group({
       usuario: ['', Validators.required],
       contraseña: ['', Validators.required]

@@ -8,13 +8,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CursosComponent } from './feature-cursos/cursos/cursos.component';
 import { ListaAlumnosComponent } from './feature-alumnos/alumnos/listaAlumnos.component';
-
+import { GuardiaPrimeroGuard } from 'src/app/sharedModule/guardia-primero.guard';
 import { AgregarCursoComponent } from './feature-cursos/agregar-curso/agregar-curso.component';
 import { InicioComponent } from 'src/app/coreModule/inicio/inicio.component';
 
 const routes: Routes = [
   {
-    path: '',component: DashboardComponent, children: [
+    path: '',component: DashboardComponent, canActivate: [GuardiaPrimeroGuard] , children: [
       {path: '', component: InicioComponent},
       {path: 'alumnos', component: ListaAlumnosComponent},
       {path: 'inscripcion', component: InscripcionComponent},

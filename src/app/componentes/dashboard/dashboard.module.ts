@@ -19,10 +19,11 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { HttpClientModule } from '@angular/common/http';
 import { FeatureInscripcionModule } from './feature-inscripcion/feature-inscripcion.module';
 import { AgregarInscripcionComponent } from './feature-inscripcion/agregar-inscripcion/agregar-inscripcion.component';
 import { DetalleCursosComponent } from './feature-cursos/detalle-cursos/detalle-cursos.component';
+
 
 @NgModule({
   declarations: [
@@ -54,11 +55,13 @@ import { DetalleCursosComponent } from './feature-cursos/detalle-cursos/detalle-
     FeatureInscripcionModule,
     FeatureCursosModule,
     FeatureAlumnosModule,
+    HttpClientModule
     ], exports: [
     MaterialModule,
     FeatureInscripcionModule,
     FeatureCursosModule,
     FeatureAlumnosModule, 
+    HttpClientModule
       
    
   ]
