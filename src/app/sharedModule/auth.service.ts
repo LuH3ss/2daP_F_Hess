@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, map,Observable,tap } from 'rxjs';
-import { GuardiaPrimeroGuard } from './guardia-primero.guard';
+
 import { Usuario } from './interfaces/usuarios';
 
 

@@ -23,14 +23,16 @@ export class ListaAlumnosService {
 
 
   updateAlumnos(alumno: ListaAlumnos): Observable<ListaAlumnos> {
-    var response: any;
-  response  = this.http.put<ListaAlumnos>(this.apiURL + alumno.id, alumno).subscribe(data => {
-    console.log("data")
-    console.log(data)
-   return data;
-   })
-  return response;
-   }
+   // var response: any;
+  //response  =
+  return this.http.put<ListaAlumnos>(this.apiURL + alumno.id, alumno)
+  //.subscribe(data => {
+   // console.log("data")
+   // console.log(data)
+   //return data;
+  }
+  //return response;
+   
 
 
 

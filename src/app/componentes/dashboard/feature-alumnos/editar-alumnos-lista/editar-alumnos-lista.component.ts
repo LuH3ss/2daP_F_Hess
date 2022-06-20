@@ -74,14 +74,14 @@ export class EditarAlumnosListaComponent implements OnInit {
 
   inicializar(alumno: ListaAlumnos) {
     this.form = this.fb.group({
-      alumno:  ["",  [Validators.required, Validators.maxLength(10)]],
+      npmbre:  ["",  [Validators.required, Validators.maxLength(10)]],
       apellido:["",  [Validators.required]],
       edad:  ["",  [Validators.required]],
       correo: ["",  [Validators.required]],
       telefono:  ["", [Validators.required]],
     })
     console.log(this.form);
-    this.form.get('alumno')?.patchValue(alumno.nombre);
+    this.form.get('npmbre')?.patchValue(alumno.nombre);
     this.form.get('apellido')?.patchValue(alumno.apellido);
     this.form.get('edad')?.patchValue(alumno.edad);
     this.form.get("correo")?.patchValue(alumno.correo);
